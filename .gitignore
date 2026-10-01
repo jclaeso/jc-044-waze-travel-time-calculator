@@ -1,0 +1,67 @@
+# ==========================================
+# 1. THE "LOCKDOWN" - Ignore everything by default
+# ==========================================
+*
+
+# ==========================================
+# 2. ESSENTIAL EXCEPTIONS
+# ==========================================
+!.gitignore
+!.gitattributes
+!README.md
+!LICENSE
+
+# ==========================================
+# 3. ALLOW DIRECTORIES (Needed to see files inside them)
+# ==========================================
+!*/
+
+# ==========================================
+# 4. ALLOWED SOURCE & DOCS
+# ==========================================
+!*.py
+!*.ipynb
+!*.md
+!*.txt
+!*.csv
+!*.json
+!*.yaml
+!*.yml
+
+# Images/Media
+!*.png
+!*.jpg
+!*.jpeg
+!*.svg
+!*.pdf
+
+# ==========================================
+# 5. EXPLICITLY IGNORE (Even if allowed above)
+# ==========================================
+# Python artifacts
+**/__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS/System noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# 6. LARGE ARTIFACTS (The "Google Drive" stuff)
+# ==========================================
+# We explicitly ignore these to ensure they stay 
+# on your local machine/Google Drive and never hit GitHub.
+*.gbr
+*.zip
+*.tar.gz
+*.7z
+*.tmp
+*.log
